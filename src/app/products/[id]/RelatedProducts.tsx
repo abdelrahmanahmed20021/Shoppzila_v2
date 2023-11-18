@@ -11,7 +11,7 @@ const RelatedProducts = async ({}: IProps) => {
     <div>
       <main className=" container mx-auto  overflow-hidden">
         <div className="mt-12 padding-x max-width" id="discover">
-          <h1 className="text-4xl text-center ">Related Products</h1>
+          <h1 className="text-4xl text-center my-4">Related Products</h1>
           <section>
             <div className="home__card-wrapper    pb-10  cursor-pointer">
               {allProducts?.slice(0, 4).map((product, idx) => (

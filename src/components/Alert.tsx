@@ -9,9 +9,9 @@ import {
 } from "@nextui-org/react";
 import { AlertCircleIcon } from "lucide-react";
 import { IProduct } from "@/interfaces";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addItemToCartAction } from "@/store/slices/cart/cartSlice";
-import { RootState } from "@/store/store";
+
 interface Iprop {
   item: IProduct;
   color: any;
@@ -20,7 +20,7 @@ interface Iprop {
 }
 export default function Alert({ item, color, size, count }: Iprop) {
   const dispatch = useDispatch();
- 
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   useEffect(() => {
     // Set up a timeout to close the modal after 2000 milliseconds (2 seconds)

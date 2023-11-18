@@ -64,7 +64,8 @@ const ProductCard = ({ item }: IProps) => {
           <Card className=" gap-10" shadow="none">
             <CardBody className="overflow-visible shadow-none py-2">
               <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-                <Image
+                
+              <Image
                   alt="Shoe"
                   className="  object-cover"
                   width={500}

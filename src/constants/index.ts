@@ -26,3 +26,18 @@ export const footerColumns: FooterColumn[] = [
     ],
   },
 ];
+
+ 
+export const images = [
+  { src: '/images/cards/1.jpg', alt: 'First' },
+  { src: '/images/cards/2.jpg', alt: 'First' },
+  { src: '/images/cards/3.jpg', alt: 'First' },
+  { src: '/images/cards/4.jpg', alt: 'First' },
+  { src: '/images/cards/5.jpg', alt: 'First' },
+  { src: '/images/cards/6.jpg', alt: 'First' },
+  { src: '/images/cards/7.jpg', alt: 'First' },
+  { src: '/images/cards/8.jpg', alt: 'First' },
+  { src: '/images/cards/9.jpg', alt: 'First' },
+  { src: '/images/cards/10.jpg', alt: 'First' },
+  
+]
