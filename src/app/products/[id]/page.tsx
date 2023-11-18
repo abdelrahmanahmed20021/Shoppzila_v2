@@ -1,6 +1,7 @@
 import ProductCard from "@/components/ProductCard";
 import { IProduct } from "@/interfaces";
 import fetchData from "@/utils";
+import RelatedProducts from "./RelatedProducts";
 
 interface IProps {
   params: {
@@ -16,9 +17,14 @@ const page = async ({ params }: IProps) => {
 
   return (
     <div className=" container mx-auto my-6">
-      {product?.map((item, idx) => (
-        <ProductCard key={idx} item={item} />
-      ))}
+      <section>
+        {product?.map((item, idx) => (
+          <ProductCard key={idx} item={item} />
+        ))}
+      </section>
+      <section>
+        <RelatedProducts/>
+      </section>
     </div>
   );
 };
