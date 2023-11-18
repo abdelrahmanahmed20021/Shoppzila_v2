@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@nextui-org/button";
-import ProductSize from "./ui/ProductSize";
-import CircleColor from "./ui/CircleColor";
+import ProductSize from "../ui/ProductSize";
+import CircleColor from "../ui/CircleColor";
 import {
   BreadcrumbItem,
   Breadcrumbs,
@@ -16,7 +16,7 @@ import { IProduct } from "@/interfaces";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItemToCartAction } from "@/store/slices/cart/cartSlice";
-import Alert from "./Alert";
+import Alert from "../Alert";
 
 interface IProps {
   item: IProduct;

@@ -1,5 +1,5 @@
  
-import ProductsCard from "@/components/ProductsCard";
+import ProductsCard from "@/components/Products/ProductsCard";
 import { IProduct } from "@/interfaces";
 import fetchData from "@/utils";
 
@@ -11,10 +11,10 @@ const Products = async ({}: IProps) => {
   return (
     <div>
       <main className=" container mx-auto overflow-hidden">
-        <div className="mt-12 padding-x padding-y max-width" id="discover">
-          <h1 className="text-xl font-bold">Featured Products</h1>
+        <div className="mt-12 padding-x max-width" id="discover">
+          <h1 className="text-4xl   p-4">Featured Products</h1>
           <section>
-            <div className="home__card-wrapper    pb-16 cursor-pointer">
+            <div className="home__card-wrapper  cursor-pointer">
               {allProducts?.map((product, idx) => (
                 <ProductsCard key={product.subSrc} idx={idx} product={product} />
               ))}

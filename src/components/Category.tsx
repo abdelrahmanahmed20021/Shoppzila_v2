@@ -24,21 +24,23 @@ const CategoryPage = ({ category }: IProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="flex flex-col justify-center space-y-2"
+        className="flex flex-col justify-center  cursor-pointer space-y-2"
         key={currentIndex}
-        initial={{ opacity: 0.5, x: -100 }}
+        initial={{ opacity: 0.8, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className=" cursor-pointer  shrink-0 w-[137px] h-[137px] overflow-hidden">
+        <div className=" shrink-0 w-[137px] h-[137px] overflow-hidden">
           <Image
             isZoomed
             className="rounded-full  "
             alt={category.title}
             src={category.src}
-          /> 
+          />
         </div>
-        <h2 className=" flex justify-center">{category.title}</h2>
+        <h2 className=" flex justify-center hover:text-orange-400">
+          {category.title}
+        </h2>
       </motion.div>
     </AnimatePresence>
   );

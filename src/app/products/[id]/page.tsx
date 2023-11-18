@@ -1,4 +1,4 @@
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/Products/ProductCard";
 import { IProduct } from "@/interfaces";
 import fetchData from "@/utils";
 import RelatedProducts from "./RelatedProducts";
@@ -23,7 +23,7 @@ const page = async ({ params }: IProps) => {
         ))}
       </section>
       <section>
-        <RelatedProducts/>
+        <RelatedProducts />
       </section>
     </div>
   );

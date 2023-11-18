@@ -1,10 +1,3 @@
-export interface CarProps {
-  name: string;
-  price: string;
-  src: string;
-  subSrc: string;
-}
-
 export interface ICategory {
   title: string;
   src: string;
@@ -18,8 +11,8 @@ export interface IProduct {
   desc?: string;
   qty: number;
   color: string;
-  size: string ;
-  count:number
+  size: string;
+  count: number;
   // count: number;
 }
 export interface IBox {

@@ -27,20 +27,23 @@ const SwipperPage = () => {
       >
         <SwiperSlide>
           <Card>
-            <CardBody className="absolute z-10 top-1 flex-col w-[50%] p-6 gap-2 !items-start">
-              <p className="text-tinyrounded-full px-3 py-1 uppercase  ">
+            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+              <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
                 EmpowerHer Suits
               </p>
-              <h4 className=" rounded-bl-full rounded-tr-full   px-3  font-extrabold text-[30px]">
-                Classic Elegance <br /> for Women
+              <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
+                Classic Elegancefor Women
               </h4>
               <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
-              Naming a collection of womens suit jackets <br />
-              can help convey the style and identity of your brand.
-
-
+                Naming a collection of womens suit jackets <br />
+                can help convey the style and identity of your brand.
               </p>
-             <Button radius="full"   className="text-[white] bg-[#FFA458] px-4 py-1" >Shop now</Button>
+              <Button
+                radius="full" 
+                className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12  "
+              >
+                Shop now
+              </Button>
             </CardBody>
             <Image
               isZoomed
@@ -51,17 +54,26 @@ const SwipperPage = () => {
             />
           </Card>
         </SwiperSlide>
-
         <SwiperSlide>
           <Card>
-            <CardHeader className="absolute z-10 top-1 flex-col gap-2 !items-start">
-              <p className="text-tiny  bg-white rounded-full px-3 py-1 uppercase font-bold">
-                Elegance in Knits
+            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+              <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
+                EmpowerHer Suits
               </p>
-              <h4 className="bg-white  rounded-bl-full rounded-tr-full   px-3     font-medium text-large">
-                The Winter Wonderland Sweater
+              <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
+                Classic Elegancefor Women
               </h4>
-            </CardHeader>
+              <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
+                Naming a collection of womens suit jackets <br />
+                can help convey the style and identity of your brand.
+              </p>
+              <Button
+                radius="full" 
+                className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12 "
+              >
+                Shop now
+              </Button>
+            </CardBody>
             <Image
               isZoomed
               removeWrapper
@@ -71,17 +83,26 @@ const SwipperPage = () => {
             />
           </Card>
         </SwiperSlide>
-
         <SwiperSlide>
           <Card>
-            <CardHeader className="absolute z-10 top-1 flex-col gap-2 !items-start">
-              <p className="text-tiny  rounded-full px-3 py-1 uppercase ">
+            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+              <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
                 EmpowerHer Suits
               </p>
-              <h4 className="bg-white  rounded-bl-full rounded-tr-full   px-3     font-medium text-large">
-                The Winter Wonderland Sweater
+              <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
+                Classic Elegancefor Women
               </h4>
-            </CardHeader>
+              <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
+                Naming a collection of womens suit jackets <br />
+                can help convey the style and identity of your brand.
+              </p>
+              <Button
+                radius="full" 
+                className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12  "
+              >
+                Shop now
+              </Button>
+            </CardBody>
             <Image
               isZoomed
               removeWrapper
@@ -91,6 +112,7 @@ const SwipperPage = () => {
             />
           </Card>
         </SwiperSlide>
+ 
       </Swiper>
     </div>
   );

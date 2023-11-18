@@ -1,0 +1,11 @@
+/* ProductsCard.module.css */
+.productCard {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .productCard:hover {
+    
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -22,7 +22,7 @@ const Categories: React.FC = async() => {
   return (
     <main className=" container mx-auto overflow-hidden">
       <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <h1 className="text-xl font-bold">Explore Popular Categories</h1>
+        <h1 className="text-2xl font ">Explore Popular Categories</h1>
         <div className=" flex py-6 gap-0 overflow-hidden">
           {category?.map((el, idx) => (
             <CategoryPage key={idx} index={idx} category={el} />
