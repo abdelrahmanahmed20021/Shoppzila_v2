@@ -1,18 +1,18 @@
-import React from "react";
-import {   Skeleton } from "@nextui-org/react";
-import { CarProps } from "@/interfaces";
-import fetchData from "@/utils";
+import React from 'react';
+
+import fetchData from '@/utils';
+import { Skeleton } from '@nextui-org/react';
 
 export default async function Loading() {
   const url = "https://shoppzila.vercel.app/api/products";
 
-  const allProducts: CarProps[] = await fetchData(url);
+  const allProducts = await fetchData(url);
   return (
     <main className=" container mx-auto overflow-hidden">
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <h1 className="text-xl font-bold">Explore Popular Categories</h1>
         <div className=" flex py-6 gap-0 overflow-hidden">
-          {allProducts?.map((product) => (
+          {allProducts?.map((product:any) => (
             <div
               key={product.src}
               className=" cursor-pointer  shrink-0 w-[137px] h-[137px] overflow-hidden"
