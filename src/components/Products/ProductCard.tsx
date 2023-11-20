@@ -129,6 +129,7 @@ const ProductCard = ({ item }: IProps) => {
                       color={tempColor}
                       size={tempSize}
                       count={count}
+                      
                     />
                   </div>
                 </div>

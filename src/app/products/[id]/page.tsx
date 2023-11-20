@@ -1,7 +1,7 @@
 import ProductCard from "@/components/Products/ProductCard";
 import { IProduct } from "@/interfaces";
 import fetchData from "@/utils";
-import RelatedProducts from "./RelatedProducts";
+import RelatedProducts from "../../../components/Products/RelatedProducts";
 
 interface IProps {
   params: {

@@ -13,6 +13,7 @@ export interface IProduct {
   color: string;
   size: string;
   count: number;
+  msg: string;
   // count: number;
 }
 export interface IBox {

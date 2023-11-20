@@ -62,6 +62,7 @@ export default function ShopingCartItem({ product }: IProps) {
                 <div className=" flex justify-between  items-center gap-4">
                   <p className=" ">
                     count : {product.count}x{product.price} $
+                    msg:{product.msg}
                   </p>
 
                   <Button
