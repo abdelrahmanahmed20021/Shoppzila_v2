@@ -10,10 +10,10 @@ import fetchData, { axiosData } from "@/utils";
 import Loading from "../Loaders/ProductLoader";
 
 interface IProps {
-  id: number;
+  item :IProduct 
 }
 
-const ProductCard = ({ id }: IProps) => {
+const ProductCard = ({ item }: IProps) => {
   const [tempColor, setTempColor] = useState<string>("#F31260");
   const [selectedColor, setSelectedColor] = useState(0);
 
@@ -32,21 +32,19 @@ const ProductCard = ({ id }: IProps) => {
     }
   };
 
-  const url = `http://localhost:3000/api/product/${id}`;
-  const { data, isLoading } = useQuery(["product", id], () =>
+  // const url = `http://localhost:3000/api/product/${id}`;
+  /* const { data, isLoading } = useQuery(["product", id], () =>
   axiosData(url) 
-);
-
-  const product: IProduct[] = data; // Ensure product is an array
-  console.log(product);
- 
+); */
+ // Ensure product is an array
+   
  
   return (
     <div className="mx-auto ">
-      {isLoading && <Loading />}
-      {data &&
-        product?.map((item, idx) => (
-          <div key={idx} className="flex-1 gap-4 ">
+      {/* {isLoading && <Loading />} */}
+      { 
+        
+          <div   className="flex-1 gap-4 ">
             <div >
               <h2 className=" text-lg font-normal lg:font-bold overflow-hidden capitalize">{item.name}</h2>
               <div className="mb-6 mt-2 flex gap-3">
@@ -106,7 +104,7 @@ const ProductCard = ({ id }: IProps) => {
               />
             </div>
           </div>
-        ))}
+        }
     </div>
   );
 };
