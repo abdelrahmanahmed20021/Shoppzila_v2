@@ -3,10 +3,10 @@ import { Button } from "@nextui-org/button";
 import ProductSize from "../ui/ProductSize";
 import CircleColor from "../ui/CircleColor";
 import { IProduct } from "@/interfaces";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Alert from "../Alert";
 import { useQuery } from "react-query";
-import fetchData from "@/utils";
+import fetchData, { axiosData } from "@/utils";
 import Loading from "../Loaders/ProductLoader";
 
 interface IProps {
@@ -33,30 +33,31 @@ const ProductCard = ({ id }: IProps) => {
   };
 
   const url = `http://localhost:3000/api/product/${id}`;
-  const { data, isLoading } = useQuery({
-    queryKey: ["product"],
-    queryFn: () => fetchData(url),
-  });
+  const { data, isLoading } = useQuery(["product", id], () =>
+  axiosData(url) 
+);
+
   const product: IProduct[] = data; // Ensure product is an array
   console.log(product);
-
+ 
+ 
   return (
-    <div>
+    <div className="mx-auto ">
       {isLoading && <Loading />}
       {data &&
         product?.map((item, idx) => (
-          <div key={idx} className="flex-1 gap-4">
-            <div>
-              <h2 className="text-lg font-bold capitalize">{item.name}</h2>
+          <div key={idx} className="flex-1 gap-4 ">
+            <div >
+              <h2 className=" text-lg font-normal lg:font-bold overflow-hidden capitalize">{item.name}</h2>
               <div className="mb-6 mt-2 flex gap-3">
                 <span className="font-bold">${item.price}</span>
-                <span className="text-default-600 line-through">
+                <span className="text-default-600 line-through hidden lg:block">
                   ${item.price + Math.ceil(item.price * 0.2)}{" "}
                 </span>
-                <span className="text-success">20% off</span>
+                <span className="text-success hidden lg:block">20% off</span>
               </div>
               <hr />
-              <p className="text-sm text-default-500"> {item.desc}</p>
+              <p className="text-sm text-default-500 text-justify"> {item.desc}</p>
             </div>
             <div className=" flex m-2 gap-2">
               <CircleColor
@@ -73,7 +74,7 @@ const ProductCard = ({ id }: IProps) => {
               setTempSize={setTempSize}
             />
 
-            <div className="mt-6 flex gap-6">
+            <div className="mt-6 flex flex-col lg:flex-row  gap-6">
               <div className="flex items-center w-[150px] justify-between border-[1px] gap-4">
                 <Button
                   variant="light"

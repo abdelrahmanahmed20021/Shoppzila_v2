@@ -18,7 +18,7 @@ export default function ShopingCartItem({ product }: IProps) {
 
   return (
     <Card
-      className="border-none bg-background/80 text-slate-950 dark:bg-default-100/70 overflow-hidden  font-light text-sm  max-w-[610px]"
+      className="border-none bg-background/90 text-slate-950 dark:bg-default-100/70 overflow-hidden  font-light text-sm  max-w-[610px]"
       shadow="lg"
     >
       <CardBody>
@@ -62,7 +62,7 @@ export default function ShopingCartItem({ product }: IProps) {
                 <div className=" flex justify-between  items-center gap-4">
                   <p className=" ">
                     count : {product.count}x{product.price} $
-                    msg:{product.msg}
+                    {/* msg:{product.msg} */}
                   </p>
 
                   <Button

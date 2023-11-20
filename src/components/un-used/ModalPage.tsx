@@ -15,7 +15,7 @@ import {
 import { useSelector } from "react-redux";
 import { IProduct } from "@/interfaces";
 import { RootState } from "@/store/store";
-import ShopingCartItem from "./ShopingCartItem";
+import ShopingCartItem from "../ShopingCartItem";
 import { ShoppingBasket, ShoppingCart } from "lucide-react";
 
 export default function ModalPage() {

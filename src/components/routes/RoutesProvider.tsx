@@ -13,10 +13,14 @@ interface IProps {}
 const RoutesProvider = ({}: IProps) => {
   return (
     <div>
-      <main className=" container  mx-auto  my-4">
-        <div className="flex gap-[30px] flex-col lg:flex-row   max-width  ">
-          <SwipperPage />
-          <TimerComponent />
+      <main className=" container mx-auto overflow-hidden">
+        <div className="mt-12 padding-x max-width" id="discover">
+          <section>
+            <div className="flex gap-[30px] flex-col lg:flex-row  ">
+              <SwipperPage />
+              <TimerComponent />
+            </div>
+          </section>
         </div>
       </main>
       <Categories />

@@ -47,7 +47,7 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
               width="100%"
               alt={name}
               className="w-full z-0 object-cover h-[200px]  "
-              src={isHovered ? src : subSrc}
+              src={isHovered ? subSrc : src}
             />
 
             {/* // <div className="  flex flex-col justify-end  transition-all ease-linear duration-1000   z-50 items-baseline"> */}

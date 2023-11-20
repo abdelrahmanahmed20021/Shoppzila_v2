@@ -66,8 +66,8 @@ const TimerComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex-1 rounded-xl relative  ">
-      <div className="w-full group h-[350px] lg:h-[420px]   justify-center items-center rounded-xl relative overflow-hidden ">
+    <div className="flex-1 rounded-xl relative flex justify-start items-center  ">
+      <div className="w-full  h-full  justify-center items-center rounded-xl relative overflow-hidden ">
         <Image
           width={1920}
           height={1000}
@@ -83,11 +83,11 @@ const TimerComponent: React.FC = () => {
         />
       </div>
 
-      <div className="absolute w-full flex justify-center items-center flex-col gap-[10px] top-0 left-0 p-[20px] sm:p-[20px]">
+      <div className="absolute w-full flex justify-center   items-center flex-col gap-4  top-0 left-0 p-4 ">
         <span className="text-[1rem]">Up to 30% off</span>
         <h2 className="text-[1.1rem] font-[600]">Shoulder bags</h2>
-        <Image alt="bag-img" src="./bag.png" />
-        <div className="flex gap-[10px]">
+        <Image alt="bag-img" width={120} height={120} src="/bag.webp" />
+        <div className="flex gap-2">
           <Button className="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small [&amp;>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors motion-reduce:transition-none border-default text-foreground border-[1px] shadow-small bg-lit-900 flex flex-col h-[50px] min-w-[50px] rounded-[50px] sm:min-w-[60px] sm:h-[60px] gap-0 p-0 sm:rounded-[60px]">
             <div className="sm:text-[1.3rem] text-[20px] font-[500] sm:font-[600]">
               {countdown.days}

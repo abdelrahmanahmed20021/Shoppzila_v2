@@ -15,7 +15,7 @@ const Footer = () => {
     <Github key="g" className="social-link" />,
   ];
   return (
-    <footer className="  pt-10 pb-4 bg-black text-white">
+    <footer className="  max-width   pt-10 pb-4 bg-black text-white">
       {/* Links */}
       <div className="relative  mb-12 flex  justify-between items-center mx-6 flex-col lg:flex-row">
         <div className="    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-8 gap-2 lg:gap-8  border-b  pb-8 border-white">
