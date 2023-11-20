@@ -1,7 +1,7 @@
 import React from "react";
-import {   Skeleton } from "@nextui-org/react";
-import fetchData from "@/utils";
+import { Skeleton } from "@nextui-org/react";
 import { IProduct } from "@/interfaces";
+import fetchData from "@/utils";
 
 export default async function Loading() {
   const url = "https://shoppzila.vercel.app/api/products";
