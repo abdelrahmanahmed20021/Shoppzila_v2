@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Skeleton } from "@nextui-org/react";
  
-export default async function App() {
+export default async function Loading() {
   return (
     <div>
       <main className=" container mx-auto overflow-hidden">
