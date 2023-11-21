@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 interface IProps {
   category: ICategory;
   index: number;
+  img:any
 }
 
 const CategoryPage = ({ category }: IProps) => {

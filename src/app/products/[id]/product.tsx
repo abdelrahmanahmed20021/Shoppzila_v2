@@ -1,4 +1,3 @@
-"use client";
 import ProductCard from "@/components/Products/ProductCard";
 import RelatedProducts from "../../../components/Products/RelatedProducts";
 import { Card, CardBody } from "@nextui-org/react";
@@ -6,26 +5,19 @@ import ImageGallury from "@/components/ui/ImageGallury";
 import Headings from "@/components/ui/Heading";
 import { IProduct } from "@/interfaces";
 import fetchData, { axiosData } from "@/utils";
-import axios from "axios";
-import { useQuery } from "react-query";
 
 interface IProps {
   params: {
     id: number;
   };
 }
-
-const retrieveProduct =  async(id:number) => {
-  const response =  await axios.get(
-    `http://localhost:3000/api/products/${id}`
-  );
-  return response.data;
-};
-
-const ProductPage =  ({ params }: IProps) => {
-  const { id } = params;
-  
  
+
+const ProductPage =async ({ params }: IProps) => {
+  const { id } = params;
+  const url = `https://shoppzila.vercel.app/api/products/${id}`;
+
+  const product: IProduct[] =await axiosData(url);
   return (
     <div>
       <div className=" container overflow-hidden  mx-auto my-6">
@@ -38,9 +30,9 @@ const ProductPage =  ({ params }: IProps) => {
                   <CardBody className="overflow-hidden  container shadow-none py-2">
                     <div className="grid    grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-items-center">
                       <ImageGallury />
-                       
-                        <ProductCard key={id} id={id} />
-                     
+                      {product?.map((item, id) => (
+                        <ProductCard key={id}   item={item} />
+                      ))}
                     </div>
                   </CardBody>
                 </Card>

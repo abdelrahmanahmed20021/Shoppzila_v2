@@ -13,6 +13,7 @@ import {
   Badge,
 } from "@nextui-org/react";
 import Link from "next/link";
+import LOGO from "./../../public/LOGO.png"
 
 import { navLinks } from "@/constants";
 import CartSlider from "./Slider-Cart";

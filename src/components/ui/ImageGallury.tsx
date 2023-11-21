@@ -1,12 +1,24 @@
 "use client";
 
 import { Image } from "@nextui-org/react";
-import { Tab } from "@headlessui/react";
-import { images } from "@/constants";
+import { Tab } from "@headlessui/react"; 
 
 interface IProps {}
 
 const ImageGallury = ({}: IProps) => {
+  const images = [
+    { src: '/images/cards/1.jpg', alt: 'First' },
+    { src: '/images/cards/2.jpg', alt: 'First' },
+    { src: '/images/cards/3.jpg', alt: 'First' },
+    { src: '/images/cards/4.jpg', alt: 'First' },
+    { src: '/images/cards/5.jpg', alt: 'First' },
+    { src: '/images/cards/6.jpg', alt: 'First' },
+    { src: '/images/cards/7.jpg', alt: 'First' },
+    { src: '/images/cards/8.jpg', alt: 'First' },
+    { src: '/images/cards/9.jpg', alt: 'First' },
+    { src: '/images/cards/10.jpg', alt: 'First' },
+    
+  ]
   return (
     <Tab.Group
       as="div"

@@ -26,7 +26,7 @@ const SwipperPage = () => {
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={1}
-        pagination={{ clickable: true }}        
+        pagination={{ clickable: true }}
         autoplay={{
           delay: 500,
           disableOnInteraction: false,
@@ -43,7 +43,7 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Elegance <br/> for Women
+                Classic Elegance <br /> for Women
               </h4>
               <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
@@ -72,7 +72,7 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Eleganc <br/> for Women
+                Classic Eleganc <br /> for Women
               </h4>
               <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
@@ -101,7 +101,7 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Eleganc <br/> for Women
+                Classic Eleganc <br /> for Women
               </h4>
               <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
@@ -124,7 +124,6 @@ const SwipperPage = () => {
           </Card>
         </SwiperSlide>
       </Swiper>
-     
     </div>
   );
 };
