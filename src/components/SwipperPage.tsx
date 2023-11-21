@@ -1,6 +1,12 @@
 "use client";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,20 +15,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Button, Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Button, Card, CardBody, Image } from "@nextui-org/react";
 
 // Use const or function before the component name
 const SwipperPage = () => {
   return (
     <div className="lg:w-[65%] w-full cursor-pointer ">
       <Swiper
-        
-        className=""
+        className=" rounded-xl"
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={1}
-        pagination={{ clickable: true }}
-        
+        pagination={{ clickable: true }}        
+        autoplay={{
+          delay: 500,
+          disableOnInteraction: false,
+        }}
+        speed={1000}
+        loop={true}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
@@ -33,9 +43,9 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Elegancefor Women
+                Classic Elegance <br/> for Women
               </h4>
-              <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
+              <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
                 can help convey the style and identity of your brand.
               </p>
@@ -50,8 +60,8 @@ const SwipperPage = () => {
               isZoomed
               removeWrapper
               alt="Card background"
-              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px]"
-              src="/images/carousel.png"
+              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px] rounded-lg"
+              src="/images/carousel/m8_slide_01.webp"
             />
           </Card>
         </SwiperSlide>
@@ -62,9 +72,9 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Elegancefor Women
+                Classic Eleganc <br/> for Women
               </h4>
-              <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
+              <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
                 can help convey the style and identity of your brand.
               </p>
@@ -79,8 +89,8 @@ const SwipperPage = () => {
               isZoomed
               removeWrapper
               alt="Card background"
-              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px]"
-              src="/images/carousel-3.png"
+              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px] rounded-lg"
+              src="/images/carousel/m8_slide_02.webp"
             />
           </Card>
         </SwiperSlide>
@@ -91,9 +101,9 @@ const SwipperPage = () => {
                 EmpowerHer Suits
               </p>
               <h4 className=" px-3 font-normal  lg:font-extrabold   text-[15px] lg:text-[30px]">
-                Classic Elegancefor Women
+                Classic Eleganc <br/> for Women
               </h4>
-              <p className="text-sm px-3 py-1  font-thin hidden sm:flex">
+              <p className="text-sm px-3 py-1   hidden sm:flex">
                 Naming a collection of womens suit jackets <br />
                 can help convey the style and identity of your brand.
               </p>
@@ -108,12 +118,13 @@ const SwipperPage = () => {
               isZoomed
               removeWrapper
               alt="Card background"
-              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px]"
-              src="/images/carousel.png"
+              className="z-0  w-fit cursor-pointer h-full object-cover lg:h-[450px] rounded-lg"
+              src="/images/carousel/m8_slide_03.webp"
             />
           </Card>
         </SwiperSlide>
       </Swiper>
+     
     </div>
   );
 };

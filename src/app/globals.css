@@ -68,6 +68,20 @@
 }
 
  
- 
- 
+
 }
+.swiper-pagination-bullet-active {
+  background-color: #FFA458 !important;
+  width: 15px  !important;
+  height: 15px !important;
+}
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.swiper-pagination-bullet-active-next{
+  width: 2px  !important;
+  height: 2px !important;
+}
+ 
