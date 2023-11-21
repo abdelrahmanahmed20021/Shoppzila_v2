@@ -4,10 +4,7 @@ import RelatedProducts from "../../../components/Products/RelatedProducts";
 import { Card, CardBody } from "@nextui-org/react";
 import ImageGallury from "@/components/ui/ImageGallury";
 import Headings from "@/components/ui/Heading";
-import { IProduct } from "@/interfaces";
-import fetchData, { axiosData } from "@/utils";
 import axios from "axios";
-import { useQuery } from "react-query";
 
 interface IProps {
   params: {
@@ -15,12 +12,6 @@ interface IProps {
   };
 }
 
-const retrieveProduct =  async(id:number) => {
-  const response =  await axios.get(
-    `http://localhost:3000/api/products/${id}`
-  );
-  return response.data;
-};
 
 const ProductPage =  ({ params }: IProps) => {
   const { id } = params;
