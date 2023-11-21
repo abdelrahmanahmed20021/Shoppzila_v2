@@ -4,8 +4,7 @@ import { IProduct } from "@/interfaces";
 import { Button } from "@nextui-org/button";
 import { Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 interface IProductCardProps {
@@ -13,16 +12,9 @@ interface IProductCardProps {
   idx: number;
 }
 const ProductsCard = ({ product, idx }: IProductCardProps) => {
-  const dispatch = useDispatch();
   const { name, price, src, subSrc } = product;
   // const dispatch = useAppDispatch();
   const [isHovered, setIsHovered] = useState(false);
-  const [opacity, setOpacity] = useState(1);
-
-  // Update opacity when src changes to subSrc
-  useEffect(() => {
-    setOpacity(src === subSrc ? 0: 0.5);
-  }, [src, subSrc]);
 
   return (
     <div className="  flex  shadow-none justify-center  ">
@@ -33,13 +25,8 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
         shadow="none"
         isPressable
         onPress={() => console.log("item pressed")}
-        
       >
-        <motion.div
-          initial={{ opacity:0.8 }}
-          animate={{ opacity: 1 }}
-           
-        >
+        <motion.div initial={{ opacity: 0.8 }} animate={{ opacity: 1 }}>
           <CardBody className="overflow-hidden p-0 relative h-[300px] transition  motion-reduce:transition-background motion-reduce:hover:transform-none">
             <Image
               shadow="sm"
@@ -73,7 +60,7 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
           </CardBody>
           <CardFooter className=" flex flex-col justify-start text-start items-start text-tiny ">
             <b className=" text-start">{name}</b>
-            <p  >{price}</p>
+            <p>{price}</p>
           </CardFooter>
         </motion.div>
       </Card>

@@ -1,13 +1,14 @@
 import React from "react";
 import {Breadcrumbs, BreadcrumbItem, Button} from "@nextui-org/react";
 import { ShoppingCartIcon } from "lucide-react";
+import Link from "next/link";
  
 
 export default function Headings() {
   return (
     <Breadcrumbs>
           <BreadcrumbItem>
-            <Button variant="light">Home</Button>
+            <Button as={Link} href="/" variant="light">Home</Button>
           </BreadcrumbItem>
           <BreadcrumbItem>
             <Button variant="light">Shop</Button>

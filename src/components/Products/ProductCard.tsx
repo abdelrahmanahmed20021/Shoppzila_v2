@@ -38,7 +38,7 @@ const ProductCard = ({ id }: IProps) => {
     queryFn: async () => await fetchData(url),
   });
   const product: IProduct[] = data; // Ensure product is an array
-  console.log(product);
+  
   // Ensure product is an array
 
   return (
