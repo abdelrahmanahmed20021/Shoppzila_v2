@@ -1,5 +1,4 @@
 "use client";
-
 import Products from "@/app/products/page";
 import SwipperPage from "../SwipperPage";
 import TimerComponent from "../TimerComponent";
@@ -13,14 +12,14 @@ interface IProps {}
 const RoutesProvider = ({}: IProps) => {
   return (
     <div>
-      <main className=" container mx-auto overflow-hidden">
-        <div className="mt-12 padding-x max-width" id="discover">
-          <section>
-            <div className="flex gap-[30px] flex-col lg:flex-row  ">
+      <main className=" container mx-auto ">
+        <div className="mt-12 padding-x padding-y max-width" id="discover">
+         
+            <div className="flex gap-[30px] flex-col lg:flex-row  mb-12 ">
               <SwipperPage />
               <TimerComponent />
             </div>
-          </section>
+          
         </div>
       </main>
       <Categories />

@@ -16,18 +16,19 @@ const SwipperPage = () => {
   return (
     <div className="lg:w-[65%] w-full cursor-pointer">
       <Swiper
+        
         className=""
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={true} // Add autoplay options
+        pagination={true}
+         
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
           <Card>
-            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+            <CardBody className="absolute z-10 top-1 flex-col   gap-2 !items-start">
               <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
                 EmpowerHer Suits
               </p>
@@ -39,7 +40,7 @@ const SwipperPage = () => {
                 can help convey the style and identity of your brand.
               </p>
               <Button
-                radius="full" 
+                radius="full"
                 className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12  "
               >
                 Shop now
@@ -56,7 +57,7 @@ const SwipperPage = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Card>
-            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+            <CardBody className="absolute z-10 top-1 flex-col   gap-2 !items-start">
               <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
                 EmpowerHer Suits
               </p>
@@ -68,7 +69,7 @@ const SwipperPage = () => {
                 can help convey the style and identity of your brand.
               </p>
               <Button
-                radius="full" 
+                radius="full"
                 className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12 "
               >
                 Shop now
@@ -85,7 +86,7 @@ const SwipperPage = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Card>
-            <CardBody className="absolute z-10 top-1 flex-col w-[90%] lg:w-[50%]  gap-2 !items-start">
+            <CardBody className="absolute z-10 top-1 flex-col   gap-2 !items-start">
               <p className="text-[10px] font-normal px-3 py-1 capitalize  ">
                 EmpowerHer Suits
               </p>
@@ -97,7 +98,7 @@ const SwipperPage = () => {
                 can help convey the style and identity of your brand.
               </p>
               <Button
-                radius="full" 
+                radius="full"
                 className="text-[white] bg-[#FFA458] w-12 h-5 lg:w-28 lg:h-12  "
               >
                 Shop now
@@ -112,7 +113,6 @@ const SwipperPage = () => {
             />
           </Card>
         </SwiperSlide>
- 
       </Swiper>
     </div>
   );

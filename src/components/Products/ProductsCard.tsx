@@ -27,7 +27,7 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
   return (
     <div className="  flex  shadow-none justify-center  ">
       <Card
-        className="h-[265px] "
+        className="h-[400px]  "
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
         shadow="none"
@@ -36,17 +36,17 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
         
       >
         <motion.div
-          initial={{ opacity }}
+          initial={{ opacity:0.8 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+           
         >
-          <CardBody className="overflow-hidden p-0 relative h-[200px] transition  motion-reduce:transition-background motion-reduce:hover:transform-none">
+          <CardBody className="overflow-hidden p-0 relative h-[300px] transition  motion-reduce:transition-background motion-reduce:hover:transform-none">
             <Image
               shadow="sm"
               radius="lg"
-              width="100%"
+              width="100"
               alt={name}
-              className="w-full z-0 object-cover h-[200px]  "
+              className="w-full z-0 object-cover h-[290px]  "
               src={isHovered ? subSrc : src}
             />
 
@@ -71,9 +71,9 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
               ""
             )}
           </CardBody>
-          <CardFooter className=" flex flex-col justify-start items-start text-tiny ">
-            <b className="flex text-center ">{name}</b>
-            <p className="  ">{price}</p>
+          <CardFooter className=" flex flex-col justify-start text-start items-start text-tiny ">
+            <b className=" text-start">{name}</b>
+            <p  >{price}</p>
           </CardFooter>
         </motion.div>
       </Card>

@@ -1,7 +1,8 @@
 "use client";
 // Import necessary modules and components
-import { Button, Image } from "@nextui-org/react";
+import { Button, CardBody, Image } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
 
 // Define the component
 const TimerComponent: React.FC = () => {
@@ -66,24 +67,22 @@ const TimerComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex-1 rounded-xl relative flex justify-start items-center  ">
-      <div className="w-full  h-full  justify-center items-center rounded-xl relative overflow-hidden ">
+    <Card className="flex-1 rounded-xl relative ">
+      
         <Image
-          width={1920}
-          height={1000}
+           
           alt="second banner"
-          className="absolute  -z-50 w-[1400px] h-[500px]  opacity-5"
-          src="/overlay.PNG"
+          className=" object-cover    w-full h-full -z-50  opacity-100 text-transparent "
+          src="/m8_deal_bg.webp"
           style={{
-            objectFit: "cover",
-            color: "transparent",
+            
             transition: "all 0.3s ease-in-out 0s",
             transformOrigin: "center center",
           }}
         />
-      </div>
+     
 
-      <div className="absolute w-full flex justify-center   items-center flex-col gap-4  top-0 left-0 p-4 ">
+      <div className="absolute w-full flex justify-center items-center flex-col gap-[25px] top-0 left-0 p-[30px] sm:p-[50px]">
         <span className="text-[1rem]">Up to 30% off</span>
         <h2 className="text-[1.1rem] font-[600]">Shoulder bags</h2>
         <Image alt="bag-img" width={120} height={120} src="/bag.webp" />
@@ -117,7 +116,7 @@ const TimerComponent: React.FC = () => {
           Shop now
         </Button>
       </div>
-    </div>
+    </Card>
   );
 };
 
