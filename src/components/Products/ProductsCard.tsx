@@ -37,6 +37,7 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
               src={isHovered ? subSrc : src}
             />
 
+            {/* // <div className="  flex flex-col justify-end  transition-all ease-linear duration-1000   z-10 items-baseline"> */}
             {isHovered ? (
               <div className="absolute top-0 right-0 h-8 w-8 z-10 rounded-full bg-white m-4 flex justify-center items-center  cursor-pointer">
                 <Search width={15} />
