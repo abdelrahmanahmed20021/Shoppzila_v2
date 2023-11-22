@@ -37,9 +37,8 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
               src={isHovered ? subSrc : src}
             />
 
-            {/* // <div className="  flex flex-col justify-end  transition-all ease-linear duration-1000   z-50 items-baseline"> */}
             {isHovered ? (
-              <div className="absolute top-0 right-0 h-8 w-8 z-50 rounded-full bg-white m-4 flex justify-center items-center  cursor-pointer">
+              <div className="absolute top-0 right-0 h-8 w-8 z-10 rounded-full bg-white m-4 flex justify-center items-center  cursor-pointer">
                 <Search width={15} />
               </div>
             ) : (
@@ -49,8 +48,7 @@ const ProductsCard = ({ product, idx }: IProductCardProps) => {
               <Button
                 as={Link}
                 href={`/products/${idx + 1} `}
-                className="absolute -bottom-4 z-50 -right-[0.52rem] h-16 w-16 rounded-tr-none  cursor-pointer   flex justify-center items-center  hover:bg-white bg-white font-light mx-2"
-                onClick={() => console.log("clicked")}
+                className="absolute -bottom-4 z-10 -right-[0.52rem] h-16 w-16 rounded-tr-none  cursor-pointer   flex justify-center items-center  hover:bg-white bg-white font-light mx-2"
               >
                 <ShoppingCart fill="black" />
               </Button>

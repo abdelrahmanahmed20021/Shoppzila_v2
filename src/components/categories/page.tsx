@@ -1,4 +1,4 @@
- 
+"use client";
 import { ICategory } from "@/interfaces";
 import fetchData from "@/utils";
 // import Loading from "./loading";
@@ -6,11 +6,11 @@ import { useQuery, useQueryClient } from "react-query";
 import CategorySlider from "../CategorySlider";
 
 const Categories = () => {
-  const url = "https://shoppzila.vercel.app/api/categories";
+  const url = "/api/categories";
   const queryClient = useQueryClient();
   const { data, isLoading } = useQuery({
     queryKey: ["data"],
-    queryFn: async() => await fetchData(url),
+    queryFn: async () => await fetchData(url),
   });
   // const data = await fetchData()
 
