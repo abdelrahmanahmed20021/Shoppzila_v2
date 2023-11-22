@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
-import ProductsCard from '@/components/Products/ProductsCard';
-import { IProduct } from '@/interfaces';
-import fetchData from '@/utils';
-import MainLoader from '@/components/Loaders/loading';
+"use client";
+
+import { useEffect, useState } from "react";
+import ProductsCard from "@/components/Products/ProductsCard";
+import { IProduct } from "@/interfaces";
+import fetchData from "@/utils";
+import MainLoader from "@/components/Loaders/loading";
 
 interface IProps {}
 
@@ -13,12 +15,12 @@ const Products: React.FC<IProps> = ({}) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const url = '/api/products';
+        const url = "/api/products";
         const products: IProduct[] = await fetchData(url);
         setAllProducts(products);
       } catch (error) {
-        setLoading(true)
-        console.error('Error fetching products:', error);
+        setLoading(true);
+        console.error("Error fetching products:", error);
       } finally {
         setLoading(false);
       }
@@ -33,11 +35,15 @@ const Products: React.FC<IProps> = ({}) => {
           <h1 className="text-4xl p-4">Featured Products</h1>
           <section>
             {loading ? (
-             <MainLoader/>
+              <MainLoader />
             ) : (
               <div className="home__card-wrapper cursor-pointer">
                 {allProducts.map((product, idx) => (
-                  <ProductsCard key={product.subSrc} idx={idx} product={product} />
+                  <ProductsCard
+                    key={product.subSrc}
+                    idx={idx}
+                    product={product}
+                  />
                 ))}
               </div>
             )}

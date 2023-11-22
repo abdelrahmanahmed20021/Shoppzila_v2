@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
-import BoxCard from '@/components/BoxCard';
-import { IBox } from '@/interfaces';
-import fetchData from '@/utils';
+"use client";
+import { useEffect, useState } from "react";
+import BoxCard from "@/components/BoxCard";
+import { IBox } from "@/interfaces";
+import fetchData from "@/utils";
 
 interface IProps {}
 
@@ -11,11 +12,11 @@ const BoxPage: React.FC<IProps> = () => {
   useEffect(() => {
     const fetchDataAsync = async () => {
       try {
-        const url = '/api/boxes';
+        const url = "/api/boxes";
         const boxesData: IBox[] = await fetchData(url);
         setBoxes(boxesData);
       } catch (error) {
-        console.error('Error fetching boxes:', error);
+        console.error("Error fetching boxes:", error);
       }
     };
 
